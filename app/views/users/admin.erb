@@ -1,0 +1,31 @@
+<p style="color: #E91E63; font-style: italic;">* This page can only be viewed by admins</p>
+<% if User.find(current_user).admin == 1 %>
+  <button class="api_call">Get new data</button>
+<% end %>
+<li class="jobtable"></li>
+<div class="joblist">
+<% @jobs.each do |job| %>
+  <%= erb :'jobs/_form', locals: { job: job } %>
+<% end %>
+</div>
+<!-- User.admin(current_user) -->
+<div class="add_job_form">
+  <form method="post" action="/jobs/favorite" >
+    <label for="job title">Job Title:</label><br>
+    <input type="text" name="job[title]" value="" placeholder="Job Title"><br>
+    <label for="Description">Description:</label><br>
+    <textarea name="job[description]" value="" placeholder="Description"></textarea><br>
+    <label for="location">Company Name:</label><br>
+    <input type="text" name="job[company_name]" value="" description="location" placeholder="Company Name"><br>
+    <label for="location">Location:</label><br>
+    <input type="text" name="job[location]" value="" description="location" placeholder="Location"><br>
+    <input type="submit" value="Add Jobs">
+  </form>
+</div>
+<div class="error_msg">
+  <% if @errors && !@errors.empty? %>
+    <% @errors.each do |msg| %>
+      <%= msg %>
+    <% end %>
+  <% end %>
+</div>

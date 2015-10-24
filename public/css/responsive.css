@@ -1,0 +1,85 @@
+
+@media screen and (min-width: 480px) {
+
+.add_job_form {
+    margin-right: 40%
+  }
+
+ /*nav {
+    background: none;
+    float: right;
+    font-size: 1.125em;
+    margin-right: 5%;
+    text-align: right;
+    width: 45%;
+        }*/
+
+  /************************
+  3 * 5 = 15
+  100 - 15 = 85%
+  85 / 3 = 28.333333333
+  *************************/
+
+
+@media screen and (min-width: 660px) {
+
+  /************************
+  HEADER
+  *************************/
+
+  .intro_msg {
+    margin-top: 100px;
+    margin-left:
+  }
+
+  nav {
+    background: none;
+    float: right;
+    font-size: 1.125em;
+    margin-right: 5%;
+    text-align: right;
+    width: 45%;
+    margin-top: -100px
+        }
+
+
+  #logo {
+    float: left;
+    margin-left: 5%;
+    text-align: left;
+    width: 45%;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  header {
+    /*border-bottom: 1px solid #222;*/
+    margin-bottom: 60px;
+   /* padding-left: 150px;
+    padding-right: 150px;*/
+  }
+
+  .intro_msg {
+    margin-top: 100px;
+    margin-left: 5%;
+    text-align: left;
+  }
+}
+
+  /************************
+  images
+  *************************/
+
+  .fav_star, .favorited, .filtered {
+   float: right;
+   margin-top: 5px;
+  }
+
+
+  /*ADMIN PAGE FORM */
+
+  /*.add_job_form {
+    margin-right: 20%;
+  }*/

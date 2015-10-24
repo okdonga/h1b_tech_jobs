@@ -1,0 +1,24 @@
+<!-- partial -->
+<!-- blue stars mean saved column turned true -->
+<!-- add job id -->
+<section>
+  <div class="content">
+    <div class="<%= job.try(:id) %>">
+    <div class="title"><a href="<%= job.try(:url)%>"><%= job.try(:title) %><a href="/">
+      <% if current_user %>
+        <% if job.try(:saved) == false %>
+          <img src="/image/fav_star.png" alt="favorite" class="fav_star">
+        <% else %>
+          <img src="/image/blue_star.png" alt="favorite" class="fav_star">
+        <% end %>
+      <% else %>
+        <img src="/image/fav_star.png" alt="favorite" class="fav_star">
+      <% end %>
+    </a></a></div>
+    <div class="company"><%= job.try(:company_name) %></div>
+    <div class="snippet"><%= job.try(:description)%></div>
+    <% if job.try(:saved) %>
+      <p>This was selected by <%= job.saved_by %></p>
+    <% end %>
+  </div></div>
+</section>

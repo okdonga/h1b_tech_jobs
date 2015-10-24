@@ -1,0 +1,14 @@
+<!-- where saved is true  -->
+<h3 class="all_jobs_you_saved">All jobs you saved</h3>
+  <% @user.jobs.each do |job| %>
+      <section>
+        <div class="content">
+          <div class="title"><a href="<%= job.try(:url)%>"><%= job.title %></a></div>
+          <div class="job_saved_date">Saved on <%= job.created_at.strftime("%m/%d/%y") %></div>
+          <div class="company"><%= job.company_name %></div>
+          <div class="snippet"><%= job.description %></div>
+        </div>
+      </section>
+  <% end %>
+
+

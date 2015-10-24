@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,400italic,700,900' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript"
+src="http://gdc.indeed.com/ads/apiresults.js"></script>
+  <script type="text/javascript">
+    var publisherKey = <%= ENV['publisherKey'] %>;
+  </script>
+
+  <script src="/js/application.js"></script>
+  <title>My Project</title>
+</head>
+
+<body>
+  <header>
+    <a href="/" id="logo"><h1><!-- img src="/image/clip.png" class="clip"> -->H1B Tech Jobs</h1></a>
+    <p class=intro_msg>Find tech companies that sponsor work visas in San Francisco!</p>
+      <nav>
+        <li><a class="selected" href="/">Home</a></li>
+        <li><a class="about" href="/">About</a></li>
+        <% if current_user %>
+          <li><a class="favorite" href="/users/<%= session[:user_id] %>/jobs">Favorite</a></li>
+          <li><a class="logout" href="/logout">Logout</a></li>
+        <% else %>
+          <li><a class="signup" href="/registration">Sign up</a></li>
+          <li><a class="login" href="/login">Log in</a></li>
+        <% end %>
+        <% if current_user %>
+          <% if User.admin(current_user) %>
+            <a href="/admin" class="admin">Admin Only</a>
+          <% end %>
+        <% end %>
+     </nav>
+     <div class="container">
+        <form id="login-form" method="post" action="/login" >
+            <label for="email">Email: </label>
+            <input type="text" name="email" value="">
+            <label for="password">Password: </label>
+            <input type="text" name="password" value="">
+            <input type="submit" value="Login">
+        </form>
+        <form id="signup-form" method="post" action="/registration" >
+          <label for="first_name">First name: </label>
+          <input type="text" name="first_name" value="">
+          <label for="last_name">Last name: </label>
+          <input type="text" name="last_name" value=""></br>
+          <label for="email">Email: </label>
+          <input type="text" name="email" value="">
+          <label for="password">Password: </label>
+          <input type="text" name="password" value=""></br>
+          <input type="submit" value="Sign up">
+        </form>
+     </div>
+     <div class="error_msg">
+     <% if @errors && !@errors.empty? %>
+        <% @errors.each do |msg| %>
+          <%= msg[1] %>
+        <% end %>
+     <% end %>
+    </div>
+
+     <% if current_user %>
+      <div class="welcome_msg" id="<%= current_user.id %>">Hello, <%= User.find(session[:user_id]).first_name %>
+      </div>
+     <% end %>
+   </header>
+
+<!-- all jobs -->
+    <div class="table-layout">
+      <%= yield %>
+    </div>
+  </div>
+  <span id=indeed_at><a href="http://www.indeed.com/">jobs</a> by <a
+href="http://www.indeed.com/" title="Job Search"><img
+src="http://www.indeed.com/p/jobsearch.gif" style="border: 0;
+vertical-align: middle;" alt="Indeed job search"></a></span>
+</body>
+</html>
+

@@ -1,0 +1,278 @@
+/*GENERAL*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/*heading*/
+
+header {
+  /*float: left;*/
+  margin: 0 0 20px 0; /*top right bottom  left*/
+  padding: 50px 0 60px 0; /*separate text without removing margin from top of page*/
+  width: 100%;
+}
+
+#logo {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  margin: 15px 0;
+  font-size: 1.75em;/*1em equivalent to 16px by default*/
+  font-weight: normal;/*unbold*/
+  line-height: 0.8em;
+}
+
+
+/*****************
+NAVIGATION
+*****************/
+
+nav {
+  text-align: center;
+  padding; 10px 0;
+  margin: 20px 0 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0 10px; /*0 top & botoom, 10px left & right*/
+  padding: 0;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  font-weight: 500;
+  padding: 15px 10px;
+}
+
+.admin {
+  border: 2px solid #E91E63;
+}
+
+/*login*/
+
+.container {
+  /*max-width: 940px;*/
+  margin: 20px auto;
+  /*padding: 0 5%;*/
+  clear: both;
+}
+
+#login-form {
+  /*display: none;*/
+  float: right;
+  font-size: 15px;
+  margin: 0 40px
+}
+
+#signup-form {
+  /*display: none;*/
+  float: right;
+  font-size: 15px;
+  margin: 0 40px;
+  line-height: 2.5
+}
+
+/*error message*/
+.error_msg {
+  list-style: none;
+  float: right;
+  margin-right: 5%;
+  text-align: right;
+  border: 2px solid #E91E63;
+  padding: 5px;
+  margin-top: 15px;
+}
+
+/*welcome message*/
+.welcome_msg {
+  margin: top: 30px;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2em;
+  font-weight: lighter;
+}
+
+/*FOOTER*/
+
+footer {
+  font-size: 0.75em;
+  text-align: center;
+  clear: both; /*specifies whether element can be adjacent to floated elements or it should be moved down and "clear" any floated elements*/
+  padding-top: 50px;
+  color: #ccc;
+}
+
+/****************
+JOB TABLES
+****************/
+
+/*IMAGE*/
+
+.clip {
+  margin-left: 10px;
+}
+
+.fav_star {
+  width: 35px;
+}
+
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+.door {
+  position: absolute;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+}
+
+/*body*/
+
+.jobtable {
+  display: block;
+  list-style: none;
+  float: right;
+  /*width: 80%;*/
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+ /* margin-top: -35px
+  /*line-height: 30px;*/*/
+}
+
+.snippet {
+  font-size: 16px;
+  display: block;
+  padding: 10px 0;
+}
+
+.company {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.job_saved_date {
+  font-size: 12px;
+  padding: 5px 0;
+}
+
+.content {
+  border-bottom: 2px solid #dfe2e6;
+  margin-top: 15px
+}
+
+.table-layout {
+  margin: 0 20%;
+}
+
+.stars {
+  list-style: none;
+}
+
+/*FAVORITE */
+.all_jobs_you_saved {
+  font-size: 1.5em;
+}
+
+
+/*ADMIN ONLY PAGE*/
+form {
+  margin-top: 5px;
+  font-size: 15px;
+}
+
+.api_call {
+  margin: 3% 40%;
+  width: 10em;
+}
+
+.joblist {
+  float: left;
+}
+
+.add_job_form {
+  float: right;
+  margin-right: -200px;
+}
+
+form {
+  margin-top: 25px;
+  font-size: 17px;
+  border-radius: 25px;
+  border: 2px solid #404040;
+  padding: 10px;
+}
+
+input {
+  margin-bottom: 15px;
+}
+
+.filtered {
+  content: url("/image/blue_star.png");
+  width: 35px;
+}
+
+.favorited {
+  content: url("/image/blue_star.png");
+  width: 35px;
+}
+
+/*colors*/
+body {
+  background-color: #f5f5f5;
+  color: #404040;
+}
+
+header {
+  background: powderblue;
+/*  border-color: #1D237F;
+*/}
+
+nav {
+  background: #f5f5f5;
+}
+
+h1 {
+  color: #E91E63;
+}
+
+/* links */
+a {
+  color: #333;
+}
+
+/* nav link */
+nav a, nav a:visited {
+  color: #333;
+}
+
+/* selected nav link */
+nav a.selected, nav a:hover, h1:hover {
+  color: #E91E63;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #a8a8a8;
+};
+
