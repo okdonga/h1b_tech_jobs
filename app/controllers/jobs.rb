@@ -2,9 +2,12 @@
 # jobs that sponsor h1b visa
 post '/jobs' do
   @allJobs = params[:jobs]
+  p "#" * 30
+  p @allJobs
   @allJobs.each do |key, value|
     if !value[:snippet].include? 'unable to sponsor'
-     @job = Job.create(title: value[:jobtitle], description: value[:snippet], location: value[:city], url: value[:url], company_name: value[:company])
+     @job = Job.new(title: value[:jobtitle], description: value[:snippet], location: value[:city], url: value[:url], company_name: value[:company])
+     @job.save
     end
   end
   erb :'jobs/new', layout: false

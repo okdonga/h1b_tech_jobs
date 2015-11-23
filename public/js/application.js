@@ -28,7 +28,7 @@ function getIndeedAPIUrl(searchTerm, location) {
       location = location || 'San%2C+Francisco',
       limit = limit || '100';
 
-  var response = 'http://api.indeed.com/ads/apisearch?'
+  var response = 'https://api.indeed.com/ads/apisearch?'
   response += 'publisher=4019886558740498'
   response += '&q='
   response += searchTerm
