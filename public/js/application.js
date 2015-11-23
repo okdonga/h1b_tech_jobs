@@ -24,19 +24,19 @@ function signup() {
 
 // get Indeed API Url
 function getIndeedAPIUrl(searchTerm, location) {
-  var searchTerm = searchTerm || 'tech jobs',
-      location = location || 'San Francisco',
-      limit = limit || 100;
+  var searchTerm = searchTerm || 'tech%2C+jobs',
+      location = location || 'San%2C+Francisco',
+      limit = limit || '100';
 
-  var response = 'https://api.indeed.com/ads/apisearch?'
-  response += 'publisher=' + publisherKey + '&q='
+  var response = 'http://api.indeed.com/ads/apisearch?'
+  response += 'publisher=4019886558740498'
+  response += '&q='
   response += searchTerm
   response += '&l='
   response += location
-  response += '&sort=&radius=&st=&jt=&start='
   response += '&limit='
-  response +=  limit
-  response += '&fromage=&filter=&latlong=1&co=us&chnl=&v=2&format=json'
+  response += limit
+  response += '&sort=&radius=&st=&jt=&start=&limit=&fromage=&filter=0&latlong=1&co=us&chnl=&v=2&format=json'
   return response;
 }
 
@@ -58,7 +58,7 @@ function saveJobs(data) {
 // api_call button triggers ajax call to Indeed API
 // and save the results
 function getData() {
-  var indeedAPI = getIndeedAPIUrl('h1b tech jobs', 'SF')
+  var indeedAPI = getIndeedAPIUrl()
   $('.api_call').click(function(event) {
     event.preventDefault();
     $.ajax({
@@ -67,6 +67,7 @@ function getData() {
     })
     .done(function(response){
       results = response.results;
+      console.log(results);
       saveJobs(results);
     })
   })
