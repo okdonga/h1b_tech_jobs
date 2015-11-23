@@ -29,7 +29,8 @@ function getIndeedAPIUrl(searchTerm, location) {
       limit = limit || '100';
 
   var response = '//api.indeed.com/ads/apisearch?'
-  response += 'publisher=4019886558740498'
+  response += 'publisher='
+  response += publisherKey
   response += '&q='
   response += searchTerm
   response += '&l='
