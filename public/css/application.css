@@ -12,8 +12,7 @@ a {
 /*heading*/
 
 header {
-  /*float: left;*/
-  margin: 0 0 20px 0; /*top right bottom  left*/
+  /*margin: 0 0 10px 0; top right bottom  left*/
   width: 100%;
 }
 
@@ -102,6 +101,7 @@ nav a {
   border: 2px solid #E91E63;
   padding: 5px;
   margin-top: 15px;
+  display: none;
 }
 
 /*welcome message*/
@@ -129,6 +129,12 @@ JOB TABLES
 ****************/
 
 /*IMAGE*/
+
+
+.landing_img {
+  margin: 0 20%;
+  width: 60%;
+}
 
 .clip {
   margin-left: 10px;
@@ -254,8 +260,7 @@ body {
 
 header {
   background: powderblue;
-/*  border-color: #1D237F;
-*/}
+}
 
 nav {
   background: #f5f5f5;

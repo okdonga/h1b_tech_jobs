@@ -63,19 +63,21 @@ src="https://gdc.indeed.com/ads/apiresults.js"></script>
         </form>
      </div>
      <div class="error_msg">
-     <% if @errors && !@errors.empty? %>
-        <% @errors.each do |msg| %>
-          <%= msg[1] %>
-        <% end %>
-     <% end %>
-    </div>
+       <% if @errors && !@errors.empty? %>
+          <% @errors.each do |msg| %>
+            <%= msg[1] %>
+          <% end %>
+       <% end %>
+      </div>
 
      <% if current_user %>
       <div class="welcome_msg" id="<%= current_user.id %>">Hello <%= User.find(session[:user_id]).first_name.capitalize %>!
       </div>
      <% end %>
    </header>
-
+   <div>
+      <img src="/image/landing2.jpg" alt="landing-image" class="landing_img">
+   </div>
 <!-- all jobs -->
     <div class="table-layout">
       <%= yield %>

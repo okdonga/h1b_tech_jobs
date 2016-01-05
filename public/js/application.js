@@ -67,7 +67,6 @@ function getData() {
     })
     .done(function(response){
       results = response.results;
-      console.log(results);
       saveJobs(results);
     })
   })
