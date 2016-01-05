@@ -20,8 +20,11 @@ src="https://gdc.indeed.com/ads/apiresults.js"></script>
 
 <body>
   <header>
-    <a href="/" id="logo"><h1><!-- img src="/image/clip.png" class="clip"> -->H1B Tech Jobs</h1></a>
-    <p class=intro_msg>Find tech companies that sponsor work visas in San Francisco!</p>
+    <div class="big-head">
+      <a href="/" id="logo"><h1>Tech Hub</h1></a>
+      <!-- <p class=intro_msg>Find tech companies that sponsor work visas in San Francisco!</p> -->
+    </div>
+    <div class="nav-bar">
       <nav>
         <li><a class="selected" href="/">Home</a></li>
         <li><a class="about" href="/">About</a></li>
@@ -38,6 +41,7 @@ src="https://gdc.indeed.com/ads/apiresults.js"></script>
           <% end %>
         <% end %>
      </nav>
+    </div>
      <div class="container">
         <form id="login-form" method="post" action="/login" >
             <label for="email">Email: </label>
@@ -67,7 +71,7 @@ src="https://gdc.indeed.com/ads/apiresults.js"></script>
     </div>
 
      <% if current_user %>
-      <div class="welcome_msg" id="<%= current_user.id %>">Hello, <%= User.find(session[:user_id]).first_name %>
+      <div class="welcome_msg" id="<%= current_user.id %>">Hello <%= User.find(session[:user_id]).first_name.capitalize %>!
       </div>
      <% end %>
    </header>

@@ -38,20 +38,17 @@
     font-size: 1.125em;
     margin-right: 5%;
     text-align: right;
-    width: 45%;
-    margin-top: -100px
         }
 
 
   #logo {
-    float: left;
-    margin-left: 5%;
     text-align: left;
     width: 45%;
   }
 
   h1 {
-    font-size: 2.5em;
+    margin-left: 30%;
+    width: 100%;
   }
 
   header {
