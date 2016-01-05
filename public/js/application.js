@@ -24,14 +24,13 @@ function signup() {
 
 // get Indeed API Url
 function getIndeedAPIUrl(searchTerm, location) {
-  var searchTerm = searchTerm || 'tech%2C+jobs',
-      location = location || 'San%2C+Francisco',
+
+  var searchTerm = searchTerm || 'tech jobs',
+      location = location || 'San Francisco',
       limit = limit || '100';
 
-  var response = '//api.indeed.com/ads/apisearch?'
-  response += 'publisher='
-  response += publisherKey
-  response += '&q='
+  var response = 'http://api.indeed.com/ads/apisearch?'
+  response += 'publisher=' + publisherKey + '&q='
   response += searchTerm
   response += '&l='
   response += location
