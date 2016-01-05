@@ -25,7 +25,7 @@ function signup() {
 // get Indeed API Url
 function getIndeedAPIUrl(searchTerm, location) {
 
-  var searchTerm = searchTerm || 'tech jobs',
+  var searchTerm = searchTerm || 'javascript',
       location = location || 'San Francisco',
       limit = limit || '100';
 
