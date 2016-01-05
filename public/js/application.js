@@ -26,9 +26,9 @@ function signup() {
 function getIndeedAPIUrl(searchTerm, location) {
   var searchTerm = searchTerm || 'tech jobs',
       location = location || 'San Francisco',
-      limit = limit || 100;
+      limit = limit || '100';
 
-  var response = 'https://api.indeed.com/ads/apisearch?'
+  var response = 'http://api.indeed.com/ads/apisearch?'
   response += 'publisher=' + publisherKey + '&q='
   response += searchTerm
   response += '&l='

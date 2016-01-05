@@ -18,6 +18,7 @@ gem 'shotgun'
 gem 'hirb'
 gem 'pry-byebug'
 gem 'dotenv'
+gem 'httparty'
 
 group :test do
   gem 'shoulda-matchers'
